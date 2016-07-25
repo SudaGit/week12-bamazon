@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<title></title>
+	<h1>Crystal Collector</h1>
+	<h2> Click on Play button to start playing. Your score must match your lucky number to win.</h2>
+	<h3>Click on Crystals to score</h3>
+
+</head>
+<body>
+	<img id ="play1" src="assets/images/button.png" alt="Play"></img>
+	<div id = "targscore"><p id ="winnum"></p><p id="winstat"></p></div>
+	<div id = "bsp"></div>
+	<div id = "crystals">
+    <img id = "crystal1" src="assets/images/redD.png" > </img>
+    <img id = "crystal2" src="assets/images/BlueD.png" > </img>
+    <img id = "crystal3" src="assets/images/BlackD.png" > </img>
+     <img id = "crystal4" src="assets/images/star.png" > </img>
+	</div>
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	 var score = 0;
+	 var magicnumber = 0;
+	 var cryshide = function() {
+	 $("#crystal1").hide();
+    $("#crystal2").hide();
+    $("#crystal3").hide();
+    $("#crystal4").hide();
+} 
+var cryshow = function() {
+	 $("#crystal1").show();
+    $("#crystal2").show();
+    $("#crystal3").show();
+    $("#crystal4").show();
+} 
+	 cryshide();
+	$("#play1").click(function () {
+		
+		$("#play1").hide();
+		$("#targscore").css("background-color", "pink");
+		magicnumber = Math.floor(Math.random() +1 )* 10;
+		$("#winnum").append("Your winning number is ");
+		$("#winnum").append( magicnumber);
+		$("#winstat").append("<BR> <BR> Click on Crystals to score");
+        $("#winstat").append(" <BR> <BR> Current Score " + score);
+       	 cryshow();	   
+	});
+	var checkstatus =function(){
+	score = score + Math.floor(Math.random() *3);
+    $("#winstat").html(" <BR> <BR> Click on Crystals to score<BR> <BR> Current Score " + score);
+    if (score === magicnumber){
+    	$("#winstat").append(" <BR> You Win !!");
+    	cryshide();
+
+    }
+    else if (score> magicnumber){
+        $("#winstat").append("<BR> You Lose !!");
+        cryshide();
+    }
+   
+
+}
+
+
+$("#crystal1").click(checkstatus);
+$("#crystal2").click(checkstatus);
+$("#crystal3").click(checkstatus);
+$("#crystal4").click(checkstatus);
+  
+});
+
+
+</script> 
+</body>
+</html>
+

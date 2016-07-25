@@ -1,0 +1,72 @@
+h1 { color: #1c5f5f;
+        font-family: Courier ;
+        font-style: bold;
+        font-size: 90px;
+        font-weight: 200px;
+        text-align:center;
+        margin-top:20px;
+        margin-bottom:20px;
+        background-color: #ffcc00;
+       }
+
+ h2 {
+ 	color: #663466;
+ 	font-family: Verdana ;
+ 	font-style: bold;
+ 	font-size: 75 px;
+ 	 text-align:center;
+ 	 margin-top:20px;
+     margin-bottom:20px;
+     background-color: #d5dfce;
+ }
+
+ h3 {
+ 	color: #319696;
+ 	font-family: Verdana ;
+ 	font-style: bold;
+ 	font-size: 75 px;
+ 	text-align:center;
+ 	 margin-top:20px;
+     margin-bottom:20px;
+     background-color:#f1ebf0;
+ 	 }
+
+ 	 #play1 {
+ 	 	display: block;
+ 	 	float: right;
+ 	 	position:relative;
+        margin-bottom: 10px;
+ 	 }
+
+#targscore {
+    display: block;
+    height:200px;
+     }
+  #bsp {
+    margin-top:10px;
+    display:block;
+    height:10px;
+    background-color:black;
+  }
+
+  #winnum
+  {
+    font-size: 25px;
+    font-style:bold;
+    font-family:Verdana;
+    color: ff7212;
+    text-align: center;
+  }
+
+  #winstat
+  {
+    font-size: 25px;
+    font-style:bold;
+    font-family:Verdana;
+    color: ff7212;
+    text-align: center;
+  }
+
+  #crystals{
+    background-color: #c0d6e4;
+  }
